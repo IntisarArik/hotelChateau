@@ -1,0 +1,587 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+.castle-page {
+  background-color: #b9cad5;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: repeat(3, 80% 20%);
+  grid-template-areas: "chateua hamburger";
+  background-color: #101825;
+  padding: 5% 0;
+}
+
+/* Navbar Header */
+.navbar-header {
+  text-align: left;
+  grid-column: 1;
+  padding-left: 8%;
+}
+
+.navbar-header h2 {
+  display: inline-block;
+  font-size: 1.25rem;
+  color: white;
+  grid-area: chateua;
+}
+
+/* Mobile navlist */
+
+.nav-list {
+  display: flex;
+  position: fixed;
+  grid-area: ul;
+  left: -100%;
+  top: 6.8%;
+  gap: 0;
+  flex-direction: column;
+  background-color: rgba(16, 24, 37, 0.8);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.nav-list li {
+  list-style: none;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.nav-list.active {
+  left: 0;
+}
+
+.link-list:hover {
+  color: #ffc107;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Antic", sans-serif;
+}
+
+/* Hamburger menu */
+.hamburger {
+  grid-area: hamburger;
+  display: block;
+  cursor: pointer;
+}
+
+.line-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.hamburger.active .line-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .line-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Castle Banner  */
+
+.castle-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: black;
+  text-align: center;
+  height: 85vh;
+  background: black;
+}
+
+.castle-banner img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 25% 50%;
+  opacity: 0.8;
+}
+
+.banner-letters {
+  position: absolute;
+  color: #fff;
+}
+
+.castle-header {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-family: "Trochut", cursive;
+  font-style: bold;
+  line-height: 0.8;
+}
+
+.castle-subheader {
+  font-size: 1.5rem;
+  font-family: "Antic", sans-serif;
+}
+
+/* Service */
+
+.service-header {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.service-header h2 {
+  color: #222d3d;
+  font-size: 1.75rem;
+  font-family: "PT Sans", sans-serif;
+}
+
+.service-header hr {
+  border: 1px solid #222d3d;
+  background-color: #222d3d;
+  margin: 1.75rem auto 0 auto;
+  height: 0.8px;
+  width: 6.5rem;
+}
+
+/* Hotel Description */
+
+.des-head {
+  font-family: "PT Sans", sans-serif;
+  color: #222d3d;
+}
+
+.des {
+  font-family: "Antic", sans-serif;
+  color: #222d3d;
+}
+
+main {
+  padding: 0 5%;
+}
+
+.description-pic img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.description-container {
+  text-align: left;
+  padding: 1rem 0 5rem 0;
+}
+
+.description-container h2,
+h3 {
+  padding-bottom: 0.75rem;
+}
+
+.service-header {
+  grid-area: service-header;
+}
+
+.room-pic {
+  grid-area: room-pic;
+}
+
+.room-description {
+  grid-area: room-description;
+}
+
+.dining-pic {
+  grid-area: dining-pic;
+}
+
+.dining-des {
+  grid-area: dining-des;
+}
+
+.bar-pic {
+  grid-area: bar-pic;
+}
+
+.bar {
+  grid-area: bar;
+}
+
+.service-pic {
+  grid-area: service-pic;
+}
+
+.service {
+  grid-area: service;
+}
+
+/* Footer */
+
+.footer-container {
+  background: url(pictures/castle-footer.jpg);
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  background-size: 500px;
+}
+
+.footer-content {
+  padding: 0 5%;
+}
+
+.footer-container h3 {
+  font-family: "Trochut", cursive;
+  font-size: 2rem;
+  font-weight: lighter;
+  padding-top: 3rem;
+}
+
+.footer-container p {
+  font-family: "Antic", sans-serif;
+  font-size: 1rem;
+}
+
+.get-email {
+  font-family: "Trochut", cursive;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  font-weight: lighter;
+  color: black;
+}
+
+/* Button */
+
+a.footer-button {
+  background: linear-gradient(to right, #b5c3cb, #b9cad5);
+  background-color: #b5c3cb;
+  color: #222d3d;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  padding: 7% 0;
+  border: 0;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}
+a.footer-button:hover {
+  background: linear-gradient(to right, #acb9c1, #b0c0ca);
+  background-color: #acb9c1;
+}
+a.footer-button:active {
+  transform: scale(0.95);
+}
+
+/* Tablet Version */
+@media screen and (min-width: 500px) {
+  .hamburger {
+    display: none;
+  }
+  .line-bar {
+    display: none;
+  }
+
+  /* Tablet Navbar */
+  .nav-container {
+    grid-template-columns: repeat(2, 45% 55%);
+    grid-template-areas: "chateua ul";
+    grid-auto-rows: auto;
+    align-items: center;
+  }
+
+  .navbar-header {
+    position: relative;
+    text-align: left;
+    grid-column: 1;
+  }
+
+  .navbar-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
+    position: static;
+    display: table;
+    white-space: nowrap;
+    text-align: right;
+    padding-right: 8%;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    transition: 0s;
+    width: auto;
+  }
+
+  .nav-list li {
+    display: inline-block;
+    margin: 0 5% 0 0;
+  }
+
+  .nav-list li a {
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 0 7%;
+  }
+
+  /* Footer */
+
+  .footer-container {
+    background: url(pictures/castle-footer.jpg);
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .footer-container h3 {
+    font-family: "Trochut", cursive;
+    font-size: 2rem;
+    font-weight: lighter;
+    padding-top: 3rem;
+  }
+
+  .footer-container p {
+    font-family: "Antic", sans-serif;
+    font-size: 1rem;
+  }
+
+  .get-email {
+    font-family: "Trochut", cursive;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-weight: lighter;
+    color: black;
+  }
+
+  a.footer-button {
+    margin: 0;
+    padding: 6% 0;
+    width: 23.688rem;
+  }
+}
+
+@media screen and (min-width: 530px) {
+  .navbar-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .nav-list li a {
+    font-size: 1rem;
+  }
+
+  /* Castle Banner  */
+
+  .castle-banner {
+    height: 80vh;
+  }
+
+  .castle-header {
+    font-size: 3.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .castle-subheader {
+    font-size: 1.75rem;
+  }
+
+  /* Service */
+
+  .service-header h2 {
+    font-size: 2rem;
+  }
+
+  /* Hotel Description */
+
+  main {
+    padding: 0 10%;
+  }
+
+  .des-head {
+    font-size: 1.875rem;
+  }
+
+  .des {
+    font-size: 1.2rem;
+  }
+
+  .get-email {
+    margin: 1.75rem 0;
+    font-weight: lighter;
+    color: black;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .nav-list li a {
+    font-size: 1.2rem;
+  }
+
+  a.footer-button {
+    padding: 5% 0;
+    width: 23.688rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* Navbar */
+  .nav-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    background-color: transparent;
+    padding: 2rem 0;
+    transition: 0.5s all;
+  }
+
+  .navbarScroll {
+    background-color: #101825;
+    padding: 1.75rem 0 !important;
+  }
+
+  .nav-list li {
+    margin-left: 10%;
+  }
+
+  .link-list:hover {
+    color: black;
+  }
+
+  .link-list-hover:hover {
+    color: #ffc107;
+  }
+
+  /* Castle banner */
+
+  .castle-banner {
+    position: relative;
+    color: black;
+    text-align: center;
+    height: 100vh;
+  }
+
+  .castle-banner img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .banner-letters {
+    text-align: center;
+  }
+
+  .castle-header {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    font-family: "Trochut", cursive;
+    line-height: 1.4;
+  }
+
+  .castle-subheader {
+    font-size: 2rem;
+    font-family: "Antic", sans-serif;
+  }
+
+  /* Services */
+
+  main {
+    padding: 0 10%;
+  }
+
+  .description-container {
+    padding: 1.5rem 0 8rem 0;
+  }
+
+  /* Image */
+  .description-pic img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Footer */
+
+  .footer-container {
+    background-position: 50% 30%;
+  }
+
+  a.footer-button {
+    padding: 4.5% 0;
+    width: 23.688rem;
+  }
+}
+
+/* Desktop Design */
+@media screen and (min-width: 1000px) {
+  .banner-letters {
+    position: absolute;
+    right: 13%;
+    top: 29%;
+  }
+
+  /* Service */
+  .top-container {
+    display: grid;
+    grid-gap: 2%;
+    margin-bottom: 10%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "service-header service-header"
+      "room-pic room-description"
+      "dining-des dining-pic"
+      "bar-pic bar"
+      "service service-pic";
+  }
+
+  .description-pic {
+    width: 100%;
+  }
+
+  .description-pic img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Footer */
+
+  .footer-container {
+    background-position: 50% 30%;
+  }
+
+  a.footer-button {
+    padding: 2.25rem 0;
+  }
+}
