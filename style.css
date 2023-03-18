@@ -59,7 +59,7 @@ body {
   flex-direction: column;
   background-color: rgba(16, 24, 37, 0.8);
   backdrop-filter: blur(5px);
-  width: 100vw;
+  width: 100%;
   text-align: center;
   transition: 0.3s;
 }
